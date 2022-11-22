@@ -2555,6 +2555,10 @@ __webpack_require__.r(__webpack_exports__);
     open: {
       "default": false,
       type: Boolean
+    },
+    hideSelect: {
+      "default": false,
+      type: Boolean
     }
   },
   computed: {
@@ -2654,6 +2658,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     item: {
@@ -2661,7 +2667,14 @@ __webpack_require__.r(__webpack_exports__);
         return {};
       },
       type: Object
+    },
+    hideSelect: {
+      "default": false,
+      type: Boolean
     }
+  },
+  mounted: function mounted() {
+    console.log(this.item.custom_properties);
   }
 });
 
@@ -51659,7 +51672,10 @@ var render = function() {
                         return [
                           _c("existing-media-item", {
                             key: key,
-                            attrs: { item: item },
+                            attrs: {
+                              item: item,
+                              "hide-select": _vm.hideSelect
+                            },
                             on: {
                               select: function($event) {
                                 _vm.$emit("select", item) && _vm.close()
@@ -51750,20 +51766,22 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass:
-                "absolute form-file-btn btn btn-default btn-primary pin-t pin-r m-2",
-              attrs: { type: "button" },
-              on: {
-                click: function($event) {
-                  return _vm.$emit("select")
-                }
-              }
-            },
-            [_vm._v(_vm._s(_vm.__("Select")))]
-          )
+          !_vm.hideSelect
+            ? _c(
+                "button",
+                {
+                  staticClass:
+                    "absolute form-file-btn btn btn-default btn-primary pin-t pin-r m-2",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.$emit("select")
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.__("Select")))]
+              )
+            : _vm._e()
         ]
       ),
       _vm._v(" "),
@@ -51777,6 +51795,12 @@ var render = function() {
         "file_name" in _vm.item
           ? _c("h5", { staticClass: "truncate text-80" }, [
               _vm._v(_vm._s(_vm.item.file_name))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.item.custom_properties.credit
+          ? _c("h5", { staticClass: "truncate text-80 mt-1" }, [
+              _vm._v("Credit: " + _vm._s(_vm.item.custom_properties.credit))
             ])
           : _vm._e()
       ])

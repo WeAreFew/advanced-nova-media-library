@@ -6,7 +6,7 @@
           Open Gallery
         </button>
 
-        <existing-media :open="existingMediaOpen" @close="existingMediaOpen = false" @select="addExistingItem"/>
+        <existing-media :open="existingMediaOpen" @close="existingMediaOpen = false" hide-select="true" />
     </div>
 </template>
 

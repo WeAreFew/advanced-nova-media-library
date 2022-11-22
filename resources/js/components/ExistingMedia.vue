@@ -41,7 +41,7 @@
         <!-- When we have results show them -->
         <div class="flex flex-wrap -mx-4 -mb-8" v-if="items.length > 0">
           <template v-for="(item, key) in items">
-            <existing-media-item :item="item" :key="key" @select="$emit('select', item) && close()"></existing-media-item>
+            <existing-media-item :item="item" :key="key" @select="$emit('select', item) && close()" :hide-select="hideSelect"></existing-media-item>
           </template>
         </div>
 
@@ -84,6 +84,10 @@
     },
     props: {
       open: {
+        default: false,
+        type: Boolean
+      },
+      hideSelect: {
         default: false,
         type: Boolean
       }
