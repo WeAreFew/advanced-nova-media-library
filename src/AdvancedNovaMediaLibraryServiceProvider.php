@@ -11,6 +11,8 @@ class AdvancedNovaMediaLibraryServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'advanced-nova-media-library');
+
         $this->publishes([
             __DIR__ . '/config/nova-media-library.php' => config_path('nova-media-library.php'),
         ], 'nova-media-library');

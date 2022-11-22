@@ -58019,8 +58019,8 @@ Nova.booting(function (Vue, router) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/harmen/Code/advanced-nova-media-library/resources/js/field.js */"./resources/js/field.js");
-module.exports = __webpack_require__(/*! /Users/harmen/Code/advanced-nova-media-library/resources/sass/field.scss */"./resources/sass/field.scss");
+__webpack_require__(/*! /Users/alexchalupka/Sites/advanced-nova-media-library/resources/js/field.js */"./resources/js/field.js");
+module.exports = __webpack_require__(/*! /Users/alexchalupka/Sites/advanced-nova-media-library/resources/sass/field.scss */"./resources/sass/field.scss");
 
 
 /***/ })
