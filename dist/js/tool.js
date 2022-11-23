@@ -289,6 +289,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     item: {
@@ -1934,6 +1935,15 @@ var render = function() {
         _vm.item.custom_properties.credit
           ? _c("h5", { staticClass: "truncate text-80 mt-1" }, [
               _vm._v("Credit: " + _vm._s(_vm.item.custom_properties.credit))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.item.custom_properties.usage_rights
+          ? _c("h5", { staticClass: "truncate text-80 mt-1" }, [
+              _vm._v(
+                "Usage Rights: " +
+                  _vm._s(_vm.item.custom_properties.usage_rights)
+              )
             ])
           : _vm._e()
       ])

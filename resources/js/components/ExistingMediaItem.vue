@@ -10,6 +10,7 @@
         <h5 class="truncate text-80" v-if="'file_name' in item">{{ item.file_name }}</h5>
         <!-- <h5 class="truncate text-80" v-if="item.custom_properties.color">{{ item.custom_properties.color }}</h5> -->
         <h5 class="truncate text-80 mt-1" v-if="item.custom_properties.credit">Credit: {{ item.custom_properties.credit }}</h5>
+        <h5 class="truncate text-80 mt-1" v-if="item.custom_properties.usage_rights">Usage Rights: {{ item.custom_properties.usage_rights }}</h5>
       </div>
     </div>
   </div>
